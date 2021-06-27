@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans >
+    <form-bean name="blogContentActionForm" type="com.creekyu.struts.form.BlogContentActionForm" />
+    <form-bean name="userContentActionForm" type="com.creekyu.struts.form.BlogUserActionForm"/>
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      name="blogContentActionForm"
+      path="/blogDo"
+      scope="request"
+      type="com.creekyu.struts.action.BlogAction"
+      parameter="command">
+      <forward name="read_passage" path="/WEB-INF/blog_page/readPassage.jsp"></forward>
+      <forward name="show_list" path="/WEB-INF/blog_page/passageList.jsp"></forward>
+      <forward name="edit_blog" path="/WEB-INF/blog_page/editPassage.jsp"></forward>
+      <forward name="add_success" path="/WEB-INF/blog_page/writeBlog.jsp"></forward>
+      <forward name="update_success" path="/WEB-INF/blog_page/editPassage.jsp"></forward>
+      <forward name="delete_success" path="/WEB-INF/blog_page/editPassage.jsp"></forward>
+      <forward name="show_content_success" path="/WEB-INF/blog_page/content.jsp"></forward>
+      <forward name="sort" path="/WEB-INF/blog_page/sort.jsp"></forward>
+      <forward name="about" path="/item/about.jsp"></forward>
+	</action>
+	
+	<action
+      name="userContentActionForm"
+      path="/login"
+      scope="request"
+      type="com.creekyu.struts.action.LoginAction">
+      <forward name="login_failed" path="/item/loginFailed.jsp"></forward>
+      <forward name="login_sucess" path="/WEB-INF/blog_page/loginSuccess.jsp"></forward> 
+	</action>
+	
+	<action
+		name="userContentActionForm"
+		path="/user"
+		scope="request"
+		type="com.creekyu.struts.action.UserAction"
+		parameter="command">
+		<forward name="register_success" path="/item/registerSuccess.jsp"></forward> 
+		<forward name="update_success"	 path="/WEB-INF/blog_page/main.jsp"></forward>
+		<forward name="logout" path="/index.jsp" redirect="true"></forward> 
+	</action>	
+	
+	<action
+      path="/mustLogin"
+      scope="request"
+      type="com.creekyu.struts.action.MustLoginAction"
+      parameter="command">
+      <forward name="blog_main" path="/WEB-INF/blog_page/main.jsp"></forward>
+      <forward name="blog_write" path="/WEB-INF/blog_page/writeBlog.jsp"></forward>
+	</action>
+	
+	
+  </action-mappings>
+
+  <message-resources parameter="com.creekyu.struts.ApplicationResources" />
+</struts-config>
+

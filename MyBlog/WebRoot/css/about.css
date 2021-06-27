@@ -1,0 +1,39 @@
+body{
+	font-family: courier, "courier new", monospace;
+	font-size: 12px;
+}
+
+.container{
+	position: fixed;
+	top: 30%;
+	left: 22%;
+	margin-left: -170px;
+	margin-top: -200px;
+	text-align: center;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	clear: both;
+	text-align: center;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#famousSentence {
+	font-size:13px;
+	font-style:italic;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+/* #img {
+	width:520px;
+	height:310px;
+	border:#B2DBA1;
+} */
