@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 	
 	<body>
-		<div class="pre-scrollabe" style="overflow-x:hidden" id="scroll">
+		<div class="pre-scrollable" style="overflow-x:hidden" id="scroll">
 		<script>setHeight();</script>
 		<div class="stars"></div>
 		
@@ -98,9 +98,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 		</div>
 		
-		<script type="text/javascript" src="../bootstrap/js/jquery-3.6.0.js"></script>
+		<script type="text/javascript" src="/MyBlog/bootstrap/js/jquery-3.6.0.js"></script>
 		<script type="text/javascript" src="/MyBlog/js/passageList.js"></script>
-		<script type="text/javascript" src="../js/star.js"></script> <!-- 引入动效 -->
+		<script type="text/javascript" src="/MyBlog/js/star.js"></script> <!-- 引入动效 -->
 		
 	</body>
 </html>

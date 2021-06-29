@@ -107,7 +107,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						   	                  &times;</button>
 						   	            <h4 class="modal-title" id="myModalLabel">修改博客</h4>
 						   	         </div>
-									 <form action="blogDo.do?command=updateBlogs&&blog_id=${blogs.blog_id}" method="post" onsubmit="return authForm()">
+									 <form action="blogDo.do?command=updateBlogs&&blog_id=${blogs.blog_id}&&user_id=${user_id}" method="post" onsubmit="return authForm()">
 										 <div class="modal-body">
 											<div class="form-group">
 												<input id="blogTitle" type="text" name="blog_title" class="form-control" placeholder="标题">
@@ -126,7 +126,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 															  <li><a href="#" onclick="selected(this)">Javascript</a></li>
 															  <li><a href="#" onclick="selected(this)">JQuery</a></li>
 															  <li><a href="#" onclick="selected(this)">Bootstrap</a></li>
-														  </ul>
+														 </ul>
 													</div>
 												</div>
 												<div class="col-md-3">

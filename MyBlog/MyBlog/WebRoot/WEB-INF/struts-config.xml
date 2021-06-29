@@ -24,6 +24,7 @@
       <forward name="show_content_success" path="/WEB-INF/blog_page/content.jsp"></forward>
       <forward name="sort" path="/WEB-INF/blog_page/sort.jsp"></forward>
       <forward name="about" path="/item/about.jsp"></forward>
+      
 	</action>
 	
 	<action

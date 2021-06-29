@@ -13,7 +13,7 @@ function authForm() {
 		alert("简述不得大于100字符！");
 		return false;
 	}
-	alert("成功！")
+	alert("成功！");
 	return true;
 }
 
